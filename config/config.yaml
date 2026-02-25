@@ -1,0 +1,54 @@
+# AI Empower Hub 360 - Configuration
+
+app:
+  name: "AI Empower Hub 360"
+  version: "0.1.0"
+  debug: false
+  environment: "development"
+
+server:
+  host: "0.0.0.0"
+  port: 8003
+  workers: 4
+
+api:
+  prefix: "/api/v1"
+  cors:
+    enabled: true
+    origins:
+      - "http://localhost:3000"
+      - "http://localhost:8000"
+      - "http://localhost:8080"
+
+# Database configuration (uncomment when needed)
+# database:
+#   type: "postgresql"
+#   host: "localhost"
+#   port: 5432
+#   name: "ai_empower_hub"
+#   user: "postgres"
+#   password: "${DB_PASSWORD}"
+
+# AI/ML Configuration
+ai:
+  default_provider: "openai"
+  models:
+    gpt4: "gpt-4"
+    gpt35: "gpt-3.5-turbo"
+  max_tokens: 2000
+  temperature: 0.7
+
+# Logging
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/app.log"
+
+# Features
+features:
+  enable_chat: true
+  enable_automation: true
+  enable_analytics: true
+  rate_limit:
+    enabled: true
+    requests_per_minute: 60

@@ -1,0 +1,232 @@
+Metadata-Version: 2.4
+Name: ai-empower-hub-360
+Version: 0.1.0
+Summary: AI Empower Hub 360 - Practical AI solutions for businesses
+Author-email: AI Cloud Tech Inc <info@aicloudtech.com>
+License: MIT
+Project-URL: Homepage, https://github.com/aicloudtech/ai-empower-hub-360
+Project-URL: Documentation, https://docs.aicloudtech.com/ai-empower-hub
+Project-URL: Repository, https://github.com/aicloudtech/ai-empower-hub-360
+Project-URL: Issues, https://github.com/aicloudtech/ai-empower-hub-360/issues
+Keywords: ai,machine-learning,automation,business
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: fastapi>=0.104.0
+Requires-Dist: uvicorn>=0.24.0
+Requires-Dist: pydantic>=2.5.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.4.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.21.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.1.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: ruff>=0.1.0; extra == "dev"
+Requires-Dist: mypy>=1.5.0; extra == "dev"
+Dynamic: license-file
+
+# AI Empower Hub 360-NC
+
+Empower Hub 360 builds intelligent AI systems that automate work, accelerate decisions, and transform business operations.
+
+**Developing Autonomous Agentic AI Agents**
+
+Empower Hub 360 NC is an innovation-driven technology initiative focused on building intelligent solutions that help individuals, businesses, and communities grow through the power of artificial intelligence and digital transformation.
+
+## Vision
+To become a leading hub for AI innovation and smart technology solutions that enable people and businesses worldwide to thrive in the digital era.
+
+## Mission
+To design, develop, and deploy intelligent systems that simplify complex problems and accelerate success through technology.
+
+## Core Services
+
+We offer focused AI solutions designed for startups and small-to-medium businesses:
+
+1. **AI Virtual Assistants & Chatbots** - Intelligent conversational AI for customer service, internal operations, and business processes
+
+2. **Workflow Automation for SMBs** - AI-powered task and workflow automation to streamline operations and reduce manual workload
+
+3. **Cloud AI Deployment & Support** - AI-ready cloud deployment with GPU computing setup and enterprise platform integration
+
+4. **AI Strategy Consulting** - Guidance on AI adoption, model selection, cost optimization, and staff training
+
+---
+
+## Additional Services
+
+- Custom AI Solutions
+- AI Integration Services  
+- AI Infrastructure Setup
+- Continuous Monitoring & Optimization
+
+### Enterprise Automation
+- Multi-Agent AI Systems
+- AI Workflow Orchestration
+- Smart Document Processing
+- Voice Business Assistants
+
+### Developer Tools
+- AI API Development
+- SDKs for AI Tools
+- Model Fine-Tuning
+- Prompt Engineering
+
+### AI Infrastructure
+- On-Prem AI Systems
+- Local LLM Deployment
+- GPU Workstations
+- Edge AI Deployment
+
+### Data Intelligence
+- Data Pipeline Automation
+- Dataset Engineering
+- AI Analytics Dashboards
+
+## Website
+
+A modern company website is available in the [`website/`](website/) directory.
+
+### Deploy to GitHub Pages (Recommended for Namecheap)
+
+**Step 1: Enable GitHub Pages**
+1. Go to: https://github.com/AI-Cloud-Tech-Inc/AI-Empower-Hub-360-NC/settings/pages
+2. Under "Build and deployment" → Source, select **"GitHub Actions"**
+3. Wait for the workflow to run (check Actions tab)
+
+**Step 2: Connect Namecheap Domain**
+1. In GitHub Settings → Pages, enter your domain: `empowerhub360.com`
+2. It will show you DNS records to add
+3. Go to Namecheap → Domain List → Manage → Advanced DNS
+4. Add these records:
+   - **CNAME Record**: Host `www` → Value `ai-cloud-tech-inc.github.io`
+   - **A Record**: Host `@` → Value `185.199.108.153`
+   - **A Record**: Host `@` → Value `185.199.109.153`
+   - **A Record**: Host `@` → Value `185.199.110.153`
+   - **A Record**: Host `@` → Value `185.199.111.153`
+
+5. Wait up to 24 hours for DNS to propagate
+
+Your site will be live at: **https://empowerhub360.com**
+
+### Local Development (Website)
+
+### Quick Start (Website)
+Simply open `website/index.html` in a browser, or serve it with a local server:
+```bash
+# Using Python
+python -m http.server 8000 --directory website
+
+# Then open http://localhost:8000
+```
+
+## Tech Stack (Backend)
+- **Backend**: Python, FastAPI
+- **AI/ML**: OpenAI, Anthropic, Transformers (extensible)
+- **Testing**: pytest
+
+## Getting Started
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Copy environment file
+cp .env.example .env
+
+# Run the application
+python -m src.main
+```
+
+## Documentation
+
+For more detailed documentation about our services, project structure, and development setup, please refer to our [Documentation](docs/README.md).
+
+### Quick Links
+- [Project Structure](#project-structure)
+- [Installation Guide](#installation-guide)
+- [Development Setup](#development-setup)
+
+### Project Structure
+
+```
+ai-empower-hub-360/
+├── src/                    # Source code
+│   ├── api/               # API endpoints
+│   ├── models/            # Data models
+│   ├── services/          # Business logic
+│   ├── utils/             # Utility functions
+│   ├── core/              # Core functionality
+│   └── main.py            # Application entry point
+├── tests/                 # Test files
+│   ├── unit/              # Unit tests
+│   └── integration/       # Integration tests
+├── config/                # Configuration files
+├── docs/                  # Documentation
+├── scripts/               # Utility scripts
+├── data/                  # Data files
+├── website/               # Website files
+├── requirements.txt       # Python dependencies
+└── pyproject.toml         # Project configuration
+```
+
+### Installation Guide
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/AI-Cloud-Tech-Inc/AI-Empower-Hub-360-NC.git
+cd AI-Empower-Hub-360-NC
+```
+
+2. Create a virtual environment:
+
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+3. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Configure environment:
+
+```bash
+cp .env.example .env
+# Edit .env with your configuration
+```
+
+5. Run the application:
+
+```bash
+python -m src.main
+```
+
+### Development Setup
+
+Run tests:
+
+```bash
+pytest
+```
+
+Run with coverage:
+
+```bash
+pytest --cov=src
+```
+
+## License
+
+MIT License - see [LICENSE](LICENSE) for details.

@@ -1,0 +1,186 @@
+[debug] [2026-02-21T04:16:52.863Z] ----------------------------------------------------------------------
+[debug] [2026-02-21T04:16:52.879Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ctrpr\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2026-02-21T04:16:52.880Z] CLI Version:   15.4.0
+[debug] [2026-02-21T04:16:52.880Z] Platform:      win32
+[debug] [2026-02-21T04:16:52.880Z] Node Version:  v24.13.1
+[debug] [2026-02-21T04:16:52.880Z] Time:          Fri Feb 20 2026 23:16:52 GMT-0500 (Eastern Standard Time)
+[debug] [2026-02-21T04:16:52.880Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-02-21T04:16:52.882Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  c:\Users\ctrpr
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[debug] [2026-02-21T04:16:57.133Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2026-02-21T04:16:57.133Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2026-02-21T04:28:25.558Z] ----------------------------------------------------------------------
+[debug] [2026-02-21T04:28:25.562Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ctrpr\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2026-02-21T04:28:25.563Z] CLI Version:   15.4.0
+[debug] [2026-02-21T04:28:25.563Z] Platform:      win32
+[debug] [2026-02-21T04:28:25.563Z] Node Version:  v24.13.1
+[debug] [2026-02-21T04:28:25.563Z] Time:          Fri Feb 20 2026 23:28:25 GMT-0500 (Eastern Standard Time)
+[debug] [2026-02-21T04:28:25.563Z] ----------------------------------------------------------------------
+[debug] 
+[error] 
+[error] Error: No currently active project.
+To run this command, you need to specify a project. You have two options:
+- Run this command with --project <alias_or_project_id>.
+- Set an active project by running firebase use --add, then rerun this command.
+To list all the Firebase projects to which you have access, run firebase projects:list.
+To learn about active projects for the CLI, visit https://firebase.google.com/docs/cli#project_aliases
+
+
+[debug] [2026-02-21T04:28:41.737Z] ----------------------------------------------------------------------
+[debug] [2026-02-21T04:28:41.742Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ctrpr\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js projects:list
+[debug] [2026-02-21T04:28:41.743Z] CLI Version:   15.4.0
+[debug] [2026-02-21T04:28:41.743Z] Platform:      win32
+[debug] [2026-02-21T04:28:41.743Z] Node Version:  v24.13.1
+[debug] [2026-02-21T04:28:41.743Z] Time:          Fri Feb 20 2026 23:28:41 GMT-0500 (Eastern Standard Time)
+[debug] [2026-02-21T04:28:41.744Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-02-21T04:28:41.931Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-21T04:28:41.931Z] > authorizing via signed-in user (aiempowerheart360@gmail.com)
+[debug] [2026-02-21T04:28:41.934Z] Checked if tokens are valid: false, expires at: 1746666293352
+[debug] [2026-02-21T04:28:41.934Z] Checked if tokens are valid: false, expires at: 1746666293352
+[debug] [2026-02-21T04:28:41.934Z] > refreshing access token with scopes: []
+[debug] [2026-02-21T04:28:41.937Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-02-21T04:28:41.937Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-21T04:28:42.187Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2026-02-21T04:28:42.188Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-21T04:28:42.188Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2026-02-21T04:28:42.507Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 401
+[debug] [2026-02-21T04:28:42.507Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[debug] [2026-02-21T04:28:42.507Z] Got a 401 Unauthenticated error for a call that required authentication. Refreshing tokens.
+[debug] [2026-02-21T04:28:42.507Z] Checked if tokens are valid: false, expires at: 1746666293352
+[debug] [2026-02-21T04:28:42.507Z] Checked if tokens are valid: false, expires at: 1746666293352
+[debug] [2026-02-21T04:28:42.507Z] > refreshing access token with scopes: []
+[debug] [2026-02-21T04:28:42.507Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-02-21T04:28:42.508Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-21T04:28:42.571Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2026-02-21T04:28:42.571Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-21T04:28:42.572Z] Request to https://firebase.googleapis.com/v1beta1/projects?pageSize=1000 had HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2026-02-21T04:28:42.895Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects?pageSize=1000 had HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at responseToError (C:\Users\ctrpr\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:53:12)
+    at RetryOperation._fn (C:\Users\ctrpr\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:325:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[error] 
+[error] Error: Failed to list Firebase projects. See firebase-debug.log for more info.
+[debug] [2026-02-21T04:29:05.361Z] ----------------------------------------------------------------------
+[debug] [2026-02-21T04:29:05.363Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ctrpr\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2026-02-21T04:29:05.363Z] CLI Version:   15.4.0
+[debug] [2026-02-21T04:29:05.364Z] Platform:      win32
+[debug] [2026-02-21T04:29:05.364Z] Node Version:  v24.13.1
+[debug] [2026-02-21T04:29:05.364Z] Time:          Fri Feb 20 2026 23:29:05 GMT-0500 (Eastern Standard Time)
+[debug] [2026-02-21T04:29:05.364Z] ----------------------------------------------------------------------
+[debug] 
+[error] 
+[error] Error: Cannot run login in non-interactive mode. See login:ci to generate a token for use in non-interactive environments.
+[debug] [2026-02-21T04:30:27.102Z] ----------------------------------------------------------------------
+[debug] [2026-02-21T04:30:27.104Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ctrpr\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login --interactive
+[debug] [2026-02-21T04:30:27.104Z] CLI Version:   15.4.0
+[debug] [2026-02-21T04:30:27.104Z] Platform:      win32
+[debug] [2026-02-21T04:30:27.104Z] Node Version:  v24.13.1
+[debug] [2026-02-21T04:30:27.105Z] Time:          Fri Feb 20 2026 23:30:27 GMT-0500 (Eastern Standard Time)
+[debug] [2026-02-21T04:30:27.105Z] ----------------------------------------------------------------------
+[debug] 
+[info] Already logged in as aiempowerheart360@gmail.com
+[debug] [2026-02-21T04:30:53.419Z] ----------------------------------------------------------------------
+[debug] [2026-02-21T04:30:53.424Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ctrpr\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js projects:list
+[debug] [2026-02-21T04:30:53.425Z] CLI Version:   15.4.0
+[debug] [2026-02-21T04:30:53.425Z] Platform:      win32
+[debug] [2026-02-21T04:30:53.425Z] Node Version:  v24.13.1
+[debug] [2026-02-21T04:30:53.425Z] Time:          Fri Feb 20 2026 23:30:53 GMT-0500 (Eastern Standard Time)
+[debug] [2026-02-21T04:30:53.426Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-02-21T04:30:53.759Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-21T04:30:53.759Z] > authorizing via signed-in user (aiempowerheart360@gmail.com)
+[debug] [2026-02-21T04:30:53.764Z] Checked if tokens are valid: false, expires at: 1746666293352
+[debug] [2026-02-21T04:30:53.765Z] Checked if tokens are valid: false, expires at: 1746666293352
+[debug] [2026-02-21T04:30:53.765Z] > refreshing access token with scopes: []
+[debug] [2026-02-21T04:30:53.768Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-02-21T04:30:53.769Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-21T04:30:53.983Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2026-02-21T04:30:53.984Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-21T04:30:53.984Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2026-02-21T04:30:54.363Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 401
+[debug] [2026-02-21T04:30:54.364Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[debug] [2026-02-21T04:30:54.364Z] Got a 401 Unauthenticated error for a call that required authentication. Refreshing tokens.
+[debug] [2026-02-21T04:30:54.364Z] Checked if tokens are valid: false, expires at: 1746666293352
+[debug] [2026-02-21T04:30:54.364Z] Checked if tokens are valid: false, expires at: 1746666293352
+[debug] [2026-02-21T04:30:54.364Z] > refreshing access token with scopes: []
+[debug] [2026-02-21T04:30:54.365Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-02-21T04:30:54.365Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-21T04:30:54.463Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2026-02-21T04:30:54.464Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-21T04:30:54.465Z] Request to https://firebase.googleapis.com/v1beta1/projects?pageSize=1000 had HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2026-02-21T04:30:54.566Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects?pageSize=1000 had HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at responseToError (C:\Users\ctrpr\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:53:12)
+    at RetryOperation._fn (C:\Users\ctrpr\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:325:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[error] 
+[error] Error: Failed to list Firebase projects. See firebase-debug.log for more info.
+[debug] [2026-02-21T04:31:24.046Z] ----------------------------------------------------------------------
+[debug] [2026-02-21T04:31:24.048Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ctrpr\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js logout
+[debug] [2026-02-21T04:31:24.049Z] CLI Version:   15.4.0
+[debug] [2026-02-21T04:31:24.049Z] Platform:      win32
+[debug] [2026-02-21T04:31:24.049Z] Node Version:  v24.13.1
+[debug] [2026-02-21T04:31:24.049Z] Time:          Fri Feb 20 2026 23:31:24 GMT-0500 (Eastern Standard Time)
+[debug] [2026-02-21T04:31:24.049Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-02-21T04:31:24.299Z] >>> [apiv2][query] GET https://accounts.google.com/o/oauth2/revoke token=1%2F%2F01M9d0UJNjSeaCgYIARAAGAESNwF-L9IrGPEgzTbUBDBNBfQWpOX8CKGeQzPDDpw98L0Fjg5GEgyRbNa2OUFRJOV0f00mpBInlQ0
+[debug] [2026-02-21T04:31:24.576Z] <<< [apiv2][status] GET https://accounts.google.com/o/oauth2/revoke 400
+[debug] [2026-02-21T04:31:25.739Z] ----------------------------------------------------------------------
+[debug] [2026-02-21T04:31:25.743Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ctrpr\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2026-02-21T04:31:25.744Z] CLI Version:   15.4.0
+[debug] [2026-02-21T04:31:25.744Z] Platform:      win32
+[debug] [2026-02-21T04:31:25.744Z] Node Version:  v24.13.1
+[debug] [2026-02-21T04:31:25.744Z] Time:          Fri Feb 20 2026 23:31:25 GMT-0500 (Eastern Standard Time)
+[debug] [2026-02-21T04:31:25.744Z] ----------------------------------------------------------------------
+[debug] 
+[error] 
+[error] Error: Cannot run login in non-interactive mode. See login:ci to generate a token for use in non-interactive environments.
+[debug] [2026-02-21T04:32:24.115Z] ----------------------------------------------------------------------
+[debug] [2026-02-21T04:32:24.117Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ctrpr\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login --interactive
+[debug] [2026-02-21T04:32:24.117Z] CLI Version:   15.4.0
+[debug] [2026-02-21T04:32:24.117Z] Platform:      win32
+[debug] [2026-02-21T04:32:24.118Z] Node Version:  v24.13.1
+[debug] [2026-02-21T04:32:24.118Z] Time:          Fri Feb 20 2026 23:32:24 GMT-0500 (Eastern Standard Time)
+[debug] [2026-02-21T04:32:24.118Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  The Firebase CLI’s MCP server feature can optionally make use of Gemini in Firebase. Learn more about Gemini in Firebase and how it uses your data: https://firebase.google.com/docs/gemini-in-firebase#how-gemini-in-firebase-uses-your-data 
+[debug] [2026-02-21T04:32:24.352Z] ExitPromptError: User force closed the prompt with 0 null
+    at C:\Users\ctrpr\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\@inquirer\core\dist\commonjs\lib\create-prompt.js:96:20
+    at Emitter.emit (C:\Users\ctrpr\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\signal-exit\dist\cjs\index.js:71:19)
+    at #processEmit (C:\Users\ctrpr\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\signal-exit\dist\cjs\index.js:240:27)
+    at #process.emit (C:\Users\ctrpr\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\signal-exit\dist\cjs\index.js:191:37)
+[debug] [2026-02-21T04:32:41.476Z] ----------------------------------------------------------------------
+[debug] [2026-02-21T04:32:41.478Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ctrpr\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login --no-localhost
+[debug] [2026-02-21T04:32:41.479Z] CLI Version:   15.4.0
+[debug] [2026-02-21T04:32:41.479Z] Platform:      win32
+[debug] [2026-02-21T04:32:41.479Z] Node Version:  v24.13.1
+[debug] [2026-02-21T04:32:41.479Z] Time:          Fri Feb 20 2026 23:32:41 GMT-0500 (Eastern Standard Time)
+[debug] [2026-02-21T04:32:41.479Z] ----------------------------------------------------------------------
+[debug] 
+[error] 
+[error] Error: Cannot run login in non-interactive mode. See login:ci to generate a token for use in non-interactive environments.
+[debug] [2026-02-21T04:33:11.710Z] ----------------------------------------------------------------------
+[debug] [2026-02-21T04:33:11.714Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ctrpr\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login:ci
+[debug] [2026-02-21T04:33:11.714Z] CLI Version:   15.4.0
+[debug] [2026-02-21T04:33:11.714Z] Platform:      win32
+[debug] [2026-02-21T04:33:11.714Z] Node Version:  v24.13.1
+[debug] [2026-02-21T04:33:11.715Z] Time:          Fri Feb 20 2026 23:33:11 GMT-0500 (Eastern Standard Time)
+[debug] [2026-02-21T04:33:11.715Z] ----------------------------------------------------------------------
+[debug] 
+[error] 
+[error] Error: Cannot run login:ci in non-interactive mode.

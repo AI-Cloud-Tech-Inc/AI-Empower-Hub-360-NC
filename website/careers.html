@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers | Empower Hub 360 NC</title>
+    <meta name="description" content="Join Empower Hub 360 NC - Explore career opportunities in AI, automation, and cutting-edge technology.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #0a0a0f;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+        }
+        .careers-hero {
+            padding: 120px 0 80px;
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%);
+            text-align: center;
+        }
+        .careers-hero h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+        }
+        .careers-hero .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .careers-hero p {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .benefits-section {
+            padding: 80px 0;
+            background: #0a0a0f;
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .benefit-card {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+        }
+        .benefit-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+        .benefit-card h3 {
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .benefit-card p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+        }
+        .open-positions {
+            padding: 80px 0;
+            background: #0f0f17;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .section-tag {
+            display: inline-block;
+            padding: 8px 16px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            border-radius: 20px;
+            color: #667eea;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+        .section-header h2 {
+            font-size: 40px;
+            color: #fff;
+        }
+        .positions-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        .position-card {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+        .position-card:hover {
+            border-color: rgba(102, 126, 234, 0.5);
+            transform: translateY(-5px);
+        }
+        .position-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        .position-title {
+            color: #fff;
+            font-size: 22px;
+            font-weight: 600;
+        }
+        .position-type {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .position-department {
+            color: #667eea;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+        .position-description {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+        .position-requirements {
+            margin-bottom: 20px;
+        }
+        .position-requirements h4 {
+            color: #fff;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .position-requirements ul {
+            color: rgba(255, 255, 255, 0.7);
+            padding-left: 20px;
+            font-size: 14px;
+        }
+        .position-requirements li {
+            margin-bottom: 6px;
+        }
+        .btn-apply {
+            display: inline-block;
+            padding: 14px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .btn-apply:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+        }
+        .culture-section {
+            padding: 80px 0;
+            background: #0a0a0f;
+        }
+        .culture-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .culture-card {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+        }
+        .culture-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+        .culture-card h3 {
+            color: #fff;
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+        .culture-card p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 15px;
+        }
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            text-align: center;
+        }
+        .cta-section h2 {
+            font-size: 40px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        .cta-section p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 30px;
+        }
+        @media (max-width: 1024px) {
+            .benefits-grid, .culture-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .positions-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 768px) {
+            .benefits-grid, .culture-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">◈</span>
+                <span class="logo-text">Empower Hub 360</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li class="dropdown">
+                    <a href="index.html#services">Services</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-submenu">
+                            <a href="#">AI Solutions</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Enterprise Automation</a></li>
+                                <li><a href="#">Multi-Agent AI Systems</a></li>
+                                <li><a href="#">AI Workflow Orchestration</a></li>
+                                <li><a href="#">Smart Document Processing</a></li>
+                                <li><a href="#">Voice Business Assistants</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="#">Developer Tools</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">AI API Development</a></li>
+                                <li><a href="#">SDKs for AI Tools</a></li>
+                                <li><a href="#">Model Fine-Tuning</a></li>
+                                <li><a href="#">Prompt Engineering</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="#">AI Infrastructure</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">On-Prem AI Systems</a></li>
+                                <li><a href="#">Local LLM Deployment</a></li>
+                                <li><a href="#">GPU Workstations</a></li>
+                                <li><a href="#">Edge AI Deployment</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="#">Data Intelligence</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Data Pipeline Automation</a></li>
+                                <li><a href="#">Dataset Engineering</a></li>
+                                <li><a href="#">AI Analytics Dashboards</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="#">Additional Services</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Custom AI Solutions</a></li>
+                                <li><a href="#">AI Integration Services</a></li>
+                                <li><a href="#">AI Infrastructure Setup</a></li>
+                                <li><a href="#">Continuous Monitoring & Optimization</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="index.html#solutions">Solutions</a></li>
+                <li class="dropdown">
+                    <a href="#">Tools</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tools.html">All Tools</a></li>
+                        <li><a href="tools.html#automation">Automation</a></li>
+                        <li><a href="tools.html#analytics">Analytics</a></li>
+                        <li><a href="tools.html#customer-support">Customer Support</a></li>
+                        <li><a href="tools.html#content">Content</a></li>
+                        <li><a href="tools.html#entertainment">Entertainment</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Use Cases</a></li>
+                <li><a href="index.html#contact" class="btn-nav">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Careers Hero -->
+    <section class="careers-hero">
+        <div class="container">
+            <h1>Join Our <span class="gradient-text">Team</span></h1>
+            <p>Build the future of AI with us. We're looking for passionate individuals to help businesses transform with intelligent automation.</p>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Why Join Us</span>
+                <h2>Benefits & Perks</h2>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Competitive Salary</h3>
+                    <p>Industry-leading compensation packages with equity options</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏥</div>
+                    <h3>Health & Wellness</h3>
+                    <p>Comprehensive health, dental, and vision insurance</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏠</div>
+                    <h3>Remote First</h3>
+                    <p>Work from anywhere with flexible hours</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📚</div>
+                    <h3>Learning Budget</h3>
+                    <p>Annual professional development and conference budget</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌴</div>
+                    <h3>Unlimited PTO</h3>
+                    <p>Take time off when you need it</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎮</div>
+                    <h3>Modern Tech</h3>
+                    <p>Latest equipment and tools to do your best work</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🤝</div>
+                    <h3>Team Events</h3>
+                    <p>Regular team building and virtual events</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Growth Path</h3>
+                    <p>Clear career progression and mentorship</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Positions -->
+    <section class="open-positions">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">We're Hiring</span>
+                <h2>Open Positions</h2>
+            </div>
+            <div class="positions-grid">
+                <div class="position-card">
+                    <div class="position-header">
+                        <span class="position-title">Senior AI Engineer</span>
+                        <span class="position-type">Full-time</span>
+                    </div>
+                    <p class="position-department">Engineering</p>
+                    <p class="position-description">Design and implement cutting-edge AI solutions for our clients. Work with LLMs, agentic systems, and automation platforms.</p>
+                    <div class="position-requirements">
+                        <h4>Requirements:</h4>
+                        <ul>
+                            <li>5+ years of experience in AI/ML development</li>
+                            <li>Strong Python, TensorFlow, or PyTorch skills</li>
+                            <li>Experience with LLMs and NLP</li>
+                            <li>Excellent problem-solving abilities</li>
+                        </ul>
+                    </div>
+                    <a href="mailto:careers@empowerhub360.com?subject=Senior AI Engineer Application" class="btn-apply">Apply Now</a>
+                </div>
+                <div class="position-card">
+                    <div class="position-header">
+                        <span class="position-title">Full Stack Developer</span>
+                        <span class="position-type">Full-time</span>
+                    </div>
+                    <p class="position-department">Engineering</p>
+                    <p class="position-description">Build scalable web applications and APIs. Work on both frontend and backend systems for our AI platform.</p>
+                    <div class="position-requirements">
+                        <h4>Requirements:</h4>
+                        <ul>
+                            <li>3+ years of full-stack development</li>
+                            <li>Proficiency in React, Node.js, Python</li>
+                            <li>Experience with cloud services (AWS/GCP)</li>
+                            <li>Strong understanding of REST APIs</li>
+                        </ul>
+                    </div>
+                    <a href="mailto:careers@empowerhub360.com?subject=Full Stack Developer Application" class="btn-apply">Apply Now</a>
+                </div>
+                <div class="position-card">
+                    <div class="position-header">
+                        <span class="position-title">AI Product Manager</span>
+                        <span class="position-type">Full-time</span>
+                    </div>
+                    <p class="position-department">Product</p>
+                    <p class="position-description">Lead the development of AI-powered products. Define roadmap and work closely with engineering teams.</p>
+                    <div class="position-requirements">
+                        <h4>Requirements:</h4>
+                        <ul>
+                            <li>3+ years of product management experience</li>
+                            <li>Understanding of AI/ML technologies</li>
+                            <li>Strong analytical and communication skills</li>
+                            <li>Experience with SaaS products</li>
+                        </ul>
+                    </div>
+                    <a href="mailto:careers@empowerhub360.com?subject=AI Product Manager Application" class="btn-apply">Apply Now</a>
+                </div>
+                <div class="position-card">
+                    <div class="position-header">
+                        <span class="position-title">DevOps Engineer</span>
+                        <span class="position-type">Full-time</span>
+                    </div>
+                    <p class="position-department">Engineering</p>
+                    <p class="position-description">Manage cloud infrastructure and CI/CD pipelines. Ensure reliable deployment of AI services.</p>
+                    <div class="position-requirements">
+                        <h4>Requirements:</h4>
+                        <ul>
+                            <li>3+ years of DevOps experience</li>
+                            <li>Strong AWS or GCP experience</li>
+                            <li>Kubernetes and Docker expertise</li>
+                            <li>Experience with infrastructure as code</li>
+                        </ul>
+                    </div>
+                    <a href="mailto:careers@empowerhub360.com?subject=DevOps Engineer Application" class="btn-apply">Apply Now</a>
+                </div>
+                <div class="position-card">
+                    <div class="position-header">
+                        <span class="position-title">Machine Learning Researcher</span>
+                        <span class="position-type">Full-time</span>
+                    </div>
+                    <p class="position-department">Research</p>
+                    <p class="position-description">Conduct research on cutting-edge AI technologies. Publish papers and implement novel algorithms.</p>
+                    <div class="position-requirements">
+                        <h4>Requirements:</h4>
+                        <ul>
+                            <li>PhD or equivalent experience in CS/ML</li>
+                            <li>Published papers in top conferences</li>
+                            <li>Strong mathematical background</li>
+                            <li>Experience with deep learning frameworks</li>
+                        </ul>
+                    </div>
+                    <a href="mailto:careers@empowerhub360.com?subject=ML Researcher Application" class="btn-apply">Apply Now</a>
+                </div>
+                <div class="position-card">
+                    <div class="position-header">
+                        <span class="position-title">Customer Success Manager</span>
+                        <span class="position-type">Full-time</span>
+                    </div>
+                    <p class="position-department">Customer Success</p>
+                    <p class="position-description">Ensure customer satisfaction and drive adoption. Work closely with clients to help them achieve their goals.</p>
+                    <div class="position-requirements">
+                        <h4>Requirements:</h4>
+                        <ul>
+                            <li>3+ years in customer success</li>
+                            <li>Understanding of AI products</li>
+                            <li>Excellent communication skills</li>
+                            <li>Track record of customer retention</li>
+                        </ul>
+                    </div>
+                    <a href="mailto:careers@empowerhub360.com?subject=Customer Success Manager Application" class="btn-apply">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Culture Section -->
+    <section class="culture-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Culture</span>
+                <h2>Why You'll Love Working Here</h2>
+            </div>
+            <div class="culture-grid">
+                <div class="culture-card">
+                    <div class="culture-icon">🌟</div>
+                    <h3>Innovation First</h3>
+                    <p>We push boundaries and embrace new ideas. Your creativity shapes the future of AI.</p>
+                </div>
+                <div class="culture-card">
+                    <div class="culture-icon">🤝</div>
+                    <h3>Collaborative Spirit</h3>
+                    <p>Work with talented people who support and learn from each other.</p>
+                </div>
+                <div class="culture-card">
+                    <h3>Impact Driven</h3>
+                    <p>See the real-world impact of your work helping businesses transform.</p>
+                </div>
+                <div class="culture-card">
+                    <h3>Goal Oriented</h3>
+                    <p>Clear objectives and the autonomy to achieve them your way.</p>
+                </div>
+                <div class="culture-card">
+                    <div class="culture-icon">🔄</div>
+                    <h3>Continuous Learning</h3>
+                    <p>Growth mindset encouraged. Learn new skills and explore new technologies.</p>
+                </div>
+                <div class="culture-card">
+                    <div class="culture-icon">⚖️</div>
+                    <h3>Work-Life Balance</h3>
+                    <p>We believe in sustainable productivity, not burnout culture.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Make an Impact?</h2>
+            <p>Join us in building the future of AI-powered business automation.</p>
+            <a href="mailto:careers@empowerhub360.com" class="btn-apply" style="padding: 18px 40px; font-size: 18px;">Send Us Your Resume</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">◈</span>
+                        <span class="logo-text">Empower Hub 360</span>
+                    </a>
+                    <p>Empowering businesses with intelligent AI solutions.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📸</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">💼</a>
+                        <a href="#" class="social-link">▶️</a>
+                        <a href="#" class="social-link">🎵</a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-slack"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="tools.html">Tools</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>📧 empowerhub360nc@gmail.com</li>
+                        <li>📞 980-273-9029</li>
+                        <li>📍 4130 Eastover Glen Rd, Charlotte, NC 28269</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Empower Hub 360 NC. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+
