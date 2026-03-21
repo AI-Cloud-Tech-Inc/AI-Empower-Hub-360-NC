@@ -264,6 +264,35 @@ network.deploy(autonomy=<span class="code-string">"high"</span>)</code></pre>
         </div>
     </footer>
 
+        <!-- AI Chat Widget -->
+    <div id="chat-widget" class="chat-widget">
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <div class="chat-avatar">&#9672;</div>
+                <div>
+                    <div class="chat-name">Empower AI Assistant</div>
+                    <div class="chat-status"><span class="status-dot"></span> Online</div>
+                </div>
+            </div>
+            <button class="chat-close" onclick="toggleChat()">&#x2715;</button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="chat-msg bot">
+                <div class="msg-bubble">Hi! I am the Empower Hub 360 AI assistant. Ask me anything about our AI services, tools, or how we can help your business!</div>
+            </div>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="chat-input" placeholder="Ask about our AI services..." />
+            <button onclick="sendChat()" class="chat-send">&#x27A4;</button>
+        </div>
+    </div>
+    <button class="chat-trigger" onclick="toggleChat()" id="chat-trigger">
+        <span class="chat-trigger-icon">&#x1F4AC;</span>
+        <span class="chat-trigger-label">Chat with AI</span>
+    </button>
+    <div id="toast-container" class="toast-container"></div>
+    <script src="../js/api.js"></script>
+    <script src="../js/chatbot.js"></script>
     <script src="../js/main.js"></script>
 </body>
 </html>

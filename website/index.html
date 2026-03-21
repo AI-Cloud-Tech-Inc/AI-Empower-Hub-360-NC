@@ -348,12 +348,13 @@ results = research_agent.deploy(
             <div class="cta-content">
                 <h2>Ready to Build Your Autonomous AI Agent?</h2>
                 <p>Start with our core services: Autonomous AI Agents, Workflow Automation, Custom AI Tool Development, Local LLM Deployment, and AI Solutions.</p>
-                <form class="contact-form">
+                <form class="contact-form" id="contact-form">
                     <div class="form-row">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Business Email" required>
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Business Email" required>
                     </div>
-                    <select>
+                    <input type="text" name="company" placeholder="Company Name" required>
+                    <select name="service_type">
                         <option value="">Select Service Interest</option>
                         <option value="agents">Autonomous AI Agents</option>
                         <option value="automation">Workflow Automation</option>
@@ -361,7 +362,7 @@ results = research_agent.deploy(
                         <option value="infrastructure">AI Infrastructure</option>
                         <option value="solutions">AI Solutions</option>
                     </select>
-                    <textarea placeholder="Tell us about your project..." rows="4"></textarea>
+                    <textarea name="message" placeholder="Tell us about your project..." rows="4"></textarea>
                     <button type="submit" class="btn-primary">Send Inquiry</button>
                 </form>
             </div>
@@ -428,6 +429,38 @@ results = research_agent.deploy(
         </div>
     </footer>
 
+    <!-- AI Chat Widget -->
+    <div id="chat-widget" class="chat-widget">
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <div class="chat-avatar">◈</div>
+                <div>
+                    <div class="chat-name">Empower AI Assistant</div>
+                    <div class="chat-status"><span class="status-dot"></span> Online</div>
+                </div>
+            </div>
+            <button class="chat-close" onclick="toggleChat()">✕</button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="chat-msg bot">
+                <div class="msg-bubble">👋 Hi! I'm the Empower Hub 360 AI assistant. Ask me anything about our AI services, tools, or how we can help your business!</div>
+            </div>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="chat-input" placeholder="Ask about our AI services..." onkeydown="if(event.key==='Enter') sendChat()" />
+            <button onclick="sendChat()" class="chat-send">➤</button>
+        </div>
+    </div>
+    <button class="chat-trigger" onclick="toggleChat()" id="chat-trigger">
+        <span class="chat-trigger-icon">💬</span>
+        <span class="chat-trigger-label">Chat with AI</span>
+    </button>
+
+    <!-- Toast Notifications -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="js/api.js"></script>
+    <script src="js/chatbot.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
