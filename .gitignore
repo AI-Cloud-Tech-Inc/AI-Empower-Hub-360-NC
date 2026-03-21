@@ -27,3 +27,4 @@ venv/
 .env/
 .env.local
 .env.*.local
+.llm-chat-history/
