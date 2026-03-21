@@ -1,0 +1,62 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ai-empower-hub-360
+    ports:
+      - "8003:8003"
+    environment:
+      - DEBUG=false
+      - ENVIRONMENT=production
+      - SCOUT_SERVICE_URL=http://scout-demo-service:3000
+    env_file:
+      - .env
+    volumes:
+      - ./src:/app/src
+      - ./website:/app/website
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8003/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+    restart: unless-stopped
+    develop:
+      watch:
+        - action: sync
+          path: ./src
+          target: /app/src
+        - action: sync
+          path: ./website
+          target: /app/website
+        - action: rebuild
+          path: ./requirements.txt
+    networks:
+      - app-network
+    depends_on:
+      - scout-demo-service
+
+  scout-demo-service:
+    build:
+      context: ./scout-demo-service
+      dockerfile: Dockerfile
+    container_name: scout-demo-service
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - APP_SERVICE_URL=http://app:8003
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
